@@ -1,9 +1,14 @@
+setwd("/workspaces/r-studio/Practical 5/")
 df = read.csv("Crimes_2022.csv")
+
+install.packages("ggplot2")
+
 
 library(dplyr)
 library(lubridate)
 library(ggplot2)
 
+options(repr.plot.width = 20, repr.plot.height =5) 
 
 #Monthwise no. of domestic crime
 df$Date = mdy_hms(df$Date)
