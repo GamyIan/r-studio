@@ -22,4 +22,10 @@ ggplot(mwd, aes(x=Month,y=crimes,group=1)) +
   geom_line(color="green",size=1) +
   geom_point(color="red",size=1)
 
+# Number of Crimes in School Premises
+df %>% 
+  filter(grepl("SCHOOL",Location.Description,ignore.case=TRUE)) %>%
+  group_by(Month) %>%
+  summarize(crimes=n())
 
+# Group by Block ka AVE, ST, etc
