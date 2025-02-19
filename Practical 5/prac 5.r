@@ -34,3 +34,6 @@ df %>%
   summarize(crimes=n())
 
 # Group by Block ka AVE, ST, etc
+library(stringr)
+df %>% mutate(suffix = str_extract(Block, "[A-Z]+$")) %>%
+    count(suffix,sort=TRUE)
