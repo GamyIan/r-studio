@@ -26,6 +26,7 @@ seq_median = function(seq){
 
 seq_median(c(1,6,4,5,3,2))
 
+# Find Standard Deviation
 seq_std=function(seq){
   n=length(seq)
   men=seq_mean(seq)
